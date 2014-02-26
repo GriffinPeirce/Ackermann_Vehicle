@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" ?>
+<sdf version='1.4'>
+  <world name='default'>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <gravity>0 0 -9.8</gravity>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <spherical_coordinates>    
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>mp
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <!--Asphalt (Floor)-->
+    <include>
+        <uri>model://asphalt_plane</uri>
+        <pose>0.318162 -1.2646 0 0 -0 0</pose>
+    </include>    
+
+    <!--DRC practicle angle_barrier-->
+    <include>
+        <uri>model://drc_practice_angled_barrier_135</uri>
+        <pose>-1 -10 0 0 -0 0</pose>
+        <static>True</static>
+    </include>
+
+    <!--Construction cones-->
+    <include>
+        <uri>model://construction_cone</uri>
+        <pose>6.48558 -3.04777 0.05 -1e-06 -1e-06 -1.81412</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://construction_cone</uri>
+        <pose>1.78943 -7.32689 0.050001 2e-06 -0 0.032744</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://construction_cone</uri>
+        <pose>-1.00041 -2.99944 0.049991 -0 -0 -3e-06</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://construction_cone</uri>
+        <pose>6.50889 0.254349 0.049991 0 -0 0.181388</pose>
+        <static>True</static>
+    </include>
+
+    <!--Doors-->
+    <include>
+        <uri>model://drc_practice_door_4x8</uri>
+        <pose>-8.03924 3.24569 1.07781 0 -0 0.100315</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://drc_practice_door_4x8</uri>
+        <pose>-7.4911 0.822433 0 0 -0 3.14084</pose>
+        <static>True</static>
+    </include>
+
+    <!--Bookshelf-->
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>27.006 -3.23583 0 0 -0 0</pose>
+        <static>True</static>
+    </include>
+    
+    <!--cabinets-->
+    <include>
+        <uri>model://cabinet</uri>
+        <pose>-4.22205 -7.17733 0.309751 1.6172 -0.024384 -2.65808</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://cabinet</uri>
+        <pose>-2.14916 -7.44061 0 0 -0 0</pose>
+        <static>True</static>
+    </include>
+
+    <!--Tables-->
+    <include>
+        <uri>model://table</uri>
+        <pose>26.4833 -6.05508 0.178695 0 -0 0.845128</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://table</uri>
+        <pose>-8.04709 -2.10828 0 0.076258 0.029653 -0.370155</pose>
+        <static>True</static>
+    </include>
+
+    <!--beer cans-->
+    <include>
+        <uri>model://beer</uri>
+        <pose>-1.58944 2.84459 0.049995 1.8e-05 9.4e-05 0.000784</pose>
+        <static>False</static>
+    </include>
+    <include>
+        <uri>model://beer</uri>
+        <pose>-3.08009 2.77696 0.165006 2.6e-05 0.0001 0.000162</pose>
+        <static>False</static>
+    </include>
+    <include>
+        <uri>model://beer</uri>
+        <pose>0.142937 2.92738 0.049999 1.7e-05 6e-06 -1.70893</pose>
+        <static>False</static>
+    </include>
+    
+    <!--Houses, Fast Foods, etc-->
+    <include>
+        <uri>model://house_3</uri>
+        <pose>7.70236 6.92864 0 0 -0 0</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://house_2</uri>
+        <pose>12.4088 -13.2796 0 0 -0 0</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://fast_food</uri>
+        <pose>-11.1372 -8.17313 0 -3e-06 0.032862 -1.5704</pose>
+        <static>True</static>
+    </include>
+
+    <!--Misc objects-->
+    <include>
+        <uri>model://mailbox</uri>
+        <pose>3.51481 2.96845 0.049991 5e-06 -2e-06 -0.000555</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://stop_sign</uri>
+        <pose>-0 -5 0.05 2e-06 -2e-06 -1e-06</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://saucepan</uri>
+        <pose>-0.712581 -4.1507 0.078997 2.3e-05 2.2e-05 -2.41873</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://construction_barrel</uri>
+        <pose>-5.62727 -0.806277 0.049999 3e-06 -0 0.000182</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://dumpster</uri>
+        <pose>-3.21634 -10.7664 0.050917 4e-06 -0 3.12192</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://speed_limit_sign</uri>
+        <pose>-5 -5 0 0 -0 0</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://robocup_3Dsim_ball</uri>
+        <pose>-4 -4.50732 0.07 0 -0 0</pose>
+        <static>False</static>
+    </include>
+    <include>
+        <uri>model://cinder_block</uri>
+        <pose>-3.21634 -10.7664 0.050917 4e-06 -0 3.12192</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://lamp_post</uri>
+        <pose>9.55377 0.169697 0 0 -0 0</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://brick_box_3x1x3</uri>
+        <pose>0.821809 6.40485 0 0 -0 0</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://cinder_block_wide</uri>
+        <pose>-2.01992 -5.91519 0.04946 -1.5e-05 -3e-06 0</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://cinder_block_2</uri>
+        <pose>1.0415 -4.01638 0.049985 -4e-06 9.1e-05 1.73847</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://cube_20k</uri>
+        <pose>-3.60068 -4.01892 0.049999 -4e-06 1e-06 -0.53767</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://starting_pen</uri>
+        <pose>23.1701 -8.8139 0 0 -0 0</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://nist_simple_ramp_120</uri>
+        <pose>8.24865 -10.7718 -0.5 -0.439104 -0 3.11589</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://coke_can</uri>
+        <pose>1.94031 2.98251 0.045862 -0.042211 0.015161 0.019139</pose>
+        <static>False</static>
+    </include>
+
+
+   <!--DRC practice stuff-->
+    <include>
+        <uri>model://drc_practice_4x4x40</uri>
+        <pose>-0.191741 -5.78955 0.094333 0 -0 0</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://drc_practice_truss</uri>
+        <pose>4.99818 -5.98081 0.193305 0 0 -0.0271</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://drc_practice_orange_jersey_barrier</uri>
+        <pose>-4.94069 -11.434 0 0 -0 1.61033</pose>
+        <static>True</static>
+    </include>
+    <include>
+        <uri>model://drc_practice_yellow_parking_block</uri>
+        <pose>-4.24234 2.73816 0 0 -0 0</pose>
+        <static>True</static>
+    </include>     
+    <include>
+        <uri>model://drc_practice_blue_cylinder</uri>
+        <pose>3.82468 0.287497 0.054225 0 -0 0</pose>
+        <static>True</static>
+    </include> 
+    <include>
+        <uri>model://drc_practice_ladder</uri>
+        <pose>9 4.58554 0 0 -0 0</pose>
+        <static>True</static>
+    </include>
+    
+    <include>
+        <uri>model://drc_practice_yellow_parking_block</uri>
+        <pose>-4.9437 2.71659 0 0 -0 0</pose>
+        <static>True</static>
+    </include> 
+
+    <!--cars-->
+    <include>
+        <uri>model://polaris_ranger_ev</uri>
+        <pose>-6.10232 6.00695 0.050319 -4.8e-05 4.9e-05 -0.086978</pose>
+        <static>True</static>
+    </include> 
+    <include>
+        <uri>model://polaris_ranger_xp900</uri>
+        <pose>-2.62115 6.20573 0.022125 3.8e-05 5.2e-05 -0.99657</pose>
+        <static>True</static>
+    </include> 
+
+    <model name='unit_box_2'>
+      <pose>-0.853959 -16.3 -0.1 0 0 0.0</pose>
+      <static>True</static>
+      <link name='link'>
+        <inertial>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>19. 9. 0.85</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <bounce/>
+            <friction>
+              <ode/>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+               <size>19. 9. 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-20.7941 -4.26687 19.574 0 0.789796 0.05507</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+  </world>
+</sdf>
